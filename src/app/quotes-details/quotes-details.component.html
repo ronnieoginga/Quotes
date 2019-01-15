@@ -3,7 +3,7 @@
   <p class="text-warning">{{quote.completeDate|dateCount}}Days ago</p>
   <div>
     <div class="btn-toolbar">
-        <div *ngFor='let quote of quotes;let i = index'>
+        <div *ngFor='let quote of quote;let i = index'>
       <button class="btn btn-sm btn-danger" (click)='quoteComplete(true)'> Delete </button>
       <button class="btn btn-sm btn-danger" (click)="upvote(i)" class="vote-btn">Likes:{{quote.upvotes}}</button>
       <button class="btn btn-sm btn-danger" (click)="downvote(i)" class="vote-btn">Dislikes:{{quote.downvotes}}</button>
