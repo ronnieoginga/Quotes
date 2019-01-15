@@ -1,6 +1,7 @@
 h1{
   text-align: center;
 }
-col4{
+.col{
   background-color: black;
+  float: right;
 }
