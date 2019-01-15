@@ -12,19 +12,21 @@
       <app-quotes-form (addQuotes)="addNewQuotes($event)"></app-quotes-form>
     </div>
 
-
+<div class="bg-primary">
 <div class="col-md-6">
 
 
 
+
+
 <div *ngFor='let quote of quotes;let i = index'>
-  <p  id="{{i}}" appStrikethrough>{{quote.name}} written on: {{quote.completeDate|date}}</p>
+  <p   id="{{i}}" appStrikethrough>{{quote.name}} written on: {{quote.completeDate|date}}</p>
 
   <button  (click)='toogleDetails(i)' class="btn btn-success" >
     Details</button>
 
 
-  <app-quotes-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeQuotes($event,i)'downvotes(i)' upvotes(i)'></app-quotes-details>
+  <app-quotes-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)= 'completeQuotes($event,i)'></app-quotes-details>
 
 
 <div class="col-md-2">
@@ -33,6 +35,6 @@
 </div>
   </div>
     </div>
-
+</div>
   </div>
   </div>
