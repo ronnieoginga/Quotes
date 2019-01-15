@@ -1,4 +1,3 @@
-
 <div class="app">
 
   <div class="panel-heading">
@@ -8,11 +7,8 @@
 <hr>
 <div class="container-fluid">
   <div class="row">
-    <div class="col4">
-      <div class="col-md-4">
-        <app-quotes-form (addQuotes)="addNewQuotes($event)"></app-quotes-form>
-      </div>
-
+    <div class="col-md-4">
+      <app-quotes-form (addQuotes)="addNewQuotes($event)"></app-quotes-form>
     </div>
 
 
@@ -24,7 +20,7 @@
         <p id="{{i}}" appStrikethrough>{{quote.name}} written on: {{quote.completeDate|date}}</p>
 
         <button (click)='toogleDetails(i)' class="btn btn-success">
-          Details
+          AUTHOR
         </button>
 
 
@@ -33,8 +29,7 @@
 
         <div class="col-md-2">
 
-          <button (click)="upvote(i)" class="vote-btn">Likes:{{quote.upvotes}}</button>
-          <button (click)="downvote(i)" class="vote-btn">Dislikes:{{quote.downvotes}}</button>
+        
         </div>
       </div>
     </div>
